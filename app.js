@@ -91,7 +91,9 @@ app.use((err, req, res, next) => {
   res.status(status).render("error.ejs", { message });
   //   res.status(status).send(message);
 });
-
+app.get("/", (req, res)=>{
+  res.render("index.ejs");
+});
 app.listen(8080, () => {
   console.log("server listing on port 8080");
 });
